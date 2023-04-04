@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Demos
+    </title>
+    <link rel="stylesheet" href="../main-style.css">
+    <style>
+        html,
+        body {
+            height: 95%;
+        }
+
+        .gallery-box {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 8pt;
+            background-color: #f5f5f5c7;
+            border-radius: 32pt;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            height: 90%;
+            align-items: start;
+            overflow-y: auto;
+        }
+
+        .gallery-box .gallery-content {
+            flex-grow: 1;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(232, 240, 255, 1) 100%);
+            padding: 8pt;
+            border: 2px solid #929292;
+            border-radius: 16pt;
+            display: inline-block;
+            margin: 8pt;
+            width: 300pt;
+            height: auto;
+        }
+
+        .gallery-box .content-title {
+            margin: 0;
+            margin-top: 16pt;
+            margin-bottom: 8pt;
+            text-align: center;
+        }
+
+        .gallery-box video {
+            height: 200pt;
+            border-radius: 8pt;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery-box">
+        <div class="gallery-content">
+            <div class="content-media">
+                <video src="../videos/mouth1.mp4" controls></video>
+            </div>
+            <div class="content-title">First version of the mouth visualizer playing in the console</div>
+        </div>
+        <div class="gallery-content">
+            <div class="content-media">
+                <video src="../videos/face1.mp4" controls></video>
+            </div>
+            <div class="content-title">Early implementation of the face visualizer</div>
+        </div>
+        <div class="gallery-content">
+            <div class="content-media">
+                <video src="../videos/face2.mp4" controls></video>
+            </div>
+            <div class="content-title">Comparing the program with the actual game</div>
+        </div>
+        <div class="gallery-content">
+            <div class="content-media">
+                <video src="../videos/newface.mp4" controls></video>
+            </div>
+            <div class="content-title">New face visualizer using pre-rendered images of the in-game models. Expressions
+                look janky because all the facial expression events are read at once from all singing characters.</div>
+        </div>
+        <div class="gallery-content">
+            <div class="content-media">
+                <video src="../videos/hzwendplayer.mp4" controls></video>
+            </div>
+            <div class="content-title">Demo of a song played on the player.</div>
+        </div>
+        <div class="gallery-content">
+            <div class="content-media">
+                <video src="../videos/djokerlights.mp4" controls></video>
+            </div>
+            <div class="content-title">Demo showcasing the song mixer for songs with swappable singers and the lights
+                and keyboard RGB plugin visualizers.</div>
+        </div>
+        <div class="gallery-content">
+            <div class="content-media">
+                <video src="../videos/ssrgb.mp4" controls></video>
+            </div>
+            <div class="content-title">Demo showing the RGB plugin running on a real device.</div>
+        </div>
+    </div>
+</body>
+
+</html>

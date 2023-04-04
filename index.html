@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ミリシタ Music Player</title>
+    <link rel="stylesheet" href="main-style.css">
+    <style>
+        /* * {
+            border: 1px solid red;
+        } */
+
+        html {
+            height: 100%;
+            overflow-y: hidden;
+        }
+
+        body {
+            color: #000000;
+            background-image: url('images/bg.png');
+            background-repeat: repeat;
+            background-size: contain;
+            height: 100%;
+            margin: 0;
+            transition: all 0.5s ease-out;
+        }
+
+        #frame {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-image: url('images/bg_dark.png');
+                color: #ffffff;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="navbar-style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <iframe id="frame" src="pages/home.html" frameborder="0"></iframe>
+    <div id="navbar">
+        <div id="home" class="navbar-button selected" onclick="navigateToPage(this)">
+            <div class="navbar-border">
+                <img class="navbar-icon" src="images/icons/home.png">
+                <div class="navbar-text">Home</div>
+            </div>
+            <div class="navbar-tint" style="background-color: rgb(224, 54, 82);"></div>
+        </div>
+        <div id="download" class="navbar-button" onclick="navigateToPage(this)">
+            <div class="navbar-border">
+                <img class="navbar-icon" src="images/icons/download.png">
+                <div class="navbar-text">Download</div>
+            </div>
+            <div class="navbar-tint" style="background-color: rgb(245, 102, 157);"></div>
+        </div>
+        <div id="demos" class="navbar-button" onclick="navigateToPage(this)">
+            <div class="navbar-border">
+                <img class="navbar-icon" src="images/icons/demos.png">
+                <div class="navbar-text">Demos</div>
+            </div>
+            <div class="navbar-tint" style="background-color: rgb(69, 202, 113);"></div>
+        </div>
+        <div id="techdetails" class="navbar-button" onclick="navigateToPage(this)">
+            <div class="navbar-border">
+                <img class="navbar-icon" src="images/icons/techdetails.png">
+                <div class="navbar-text">Technical</div>
+            </div>
+            <div class="navbar-tint" style="background-color: rgb(255, 170, 59);"></div>
+        </div>
+        <div id="developer" class="navbar-button" onclick="navigateToPage(this)">
+            <div class="navbar-border">
+                <img class="navbar-icon" src="images/icons/developer.png">
+                <div class="navbar-text">Developer</div>
+            </div>
+            <div class="navbar-tint" style="background-color: rgb(38, 228, 202);"></div>
+        </div>
+    </div>
+</body>
+
+</html>

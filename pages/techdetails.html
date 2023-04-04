@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Tech Details
+    </title>
+    <link rel="stylesheet" href="../main-style.css">
+    <style>
+        .dialog-box h2 {
+            height: 400pt;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dialog-box">
+        <div class="db-title-bar">
+            <h1>Technical Details</h1>
+        </div>
+        <h2>
+            <strong>General details</strong><br>
+            The program started as mere testing grounds for an open source implementation of an audio codec that a lot
+            of Japanese video games use; CRIWARE's HCA format.
+            After a bit of tinkering I decided to delve a little deeper into reverse-engineering the Unity assets. For
+            downloading said assets,
+            <a href="https://github.com/OpenMLTD/MLTDTools">OpenMLTD</a>, a project that figured out the asset
+            downloading side of things helped a ton. I eventually
+            ended up using their download code in MirishitaMusicPlayer.<br>
+            <br>
+            A lot of the mechanisms used by the game to play back music videos aside from baked animation is by using a
+            sequence of events triggered at a certain time.
+            The triggering of these events can be viewed from the music player itself. Events are sent as a payload
+            containing the event ID, and its data.
+            For instance, event ID 43 controls the lipsync, and the <code>Param</code> property contains which mouth
+            shape (A, I, U, E, O) to apply.<br>
+            <br>
+            During playback, the program caches all relevant events (the ones it can show), like the "mute" or the parts
+            that control which character is supposed to be
+            singing, the lights, the facial expressions, the lipsync, etc. in order to display them for visualization.
+            For more information, feel free to check out the
+            <a
+                href="https://github.com/MarshmallowAndroid/MirishitaMusicPlayer/blob/master/MirishitaMusicPlayer/Common/ScenarioPlayer.cs">file
+                responsible for this functionality</a>.<br>
+            <br>
+
+            <strong>RGB Plugin</strong><br>
+            RGB functionality is implemented via a plugin system where the library is dynamically loaded during song
+            playback and unloaded on finish. This makes it easier to debug since you only have to stop the song in order
+            to rebuild the plugin. The song light targets (the ID of which type of light will be triggered during the
+            event)
+            for choosing the source of lights to use for the RGB peripheral/s and the song ID for identification are
+            passed to the plugin
+            during initialization.<br>
+            <br>
+            Light events in the scenario will call the <code>UpdateRgbAsync()</code> function. An important thing to
+            note is that the light events consist mainly of the light target, its colors, and the duration of the light
+            transition from one color to another. The implementation of the transition animations will be up to
+            the developer.
+            <a
+                href="https://github.com/MarshmallowAndroid/MirishitaMusicPlayer/tree/master/Sample%20RGB%20Plugins">Samples</a>
+            for OpenRGB and SteelSeries per-key keyboards can be found in the repository.<br>
+            <br>
+            The plugin system also allows for a settings or configuration window to be shown when clicking the "RGB settings..." button in the player.
+        </h2>
+    </div>
+</body>
+
+</html>

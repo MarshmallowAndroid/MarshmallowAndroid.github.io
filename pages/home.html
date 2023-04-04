@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Home
+    </title>
+    <link rel="stylesheet" href="../main-style.css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #logo {
+            width: 30%;
+            margin: 0 auto;
+            display: block;
+            margin-top: 36pt;
+            /* top: 25%;
+            position: relative;
+            transform: translate(0%, -50%); */
+        }
+
+        h1,
+        h2,
+        p {
+            color: #000000;
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 12pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: initial;
+        }
+
+        sup,
+        .cite {
+            color: #585858;
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            h1,
+            h2,
+            p {
+                color: #ffffff;
+            }
+
+            sup,
+            .cite {
+                color: #bdbdbd;
+            }
+        }
+
+        @media screen and (max-width: 1035px) {
+            h1 {
+                font-size: 16pt;
+            }
+
+            h2 {
+                font-size: 12pt;
+            }
+
+            p {
+                font-size: 8pt;
+            }
+
+            sup,
+            .cite {
+                font-size: 8pt;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            
+        }
+    </style>
+</head>
+
+<body>
+    <img id="logo" src="../images/logo.png" alt="">
+    <h1>
+        A (Very) Unofficial Music Player for<br>
+        アイドルマスター ミリオンライブ！ シアターデイズ<br>
+        THE iDOLM@STER Million Live! Theater Days
+    </h1>
+    <h2>
+        Play back songs from the mobile rhythm game with almost<sup>[1]</sup> all songs working flawlessly.<br>
+        Implements an RGB plugin framework for syncing your RGB peripherals with the music!<br><br>
+    </h2>
+    <p class="cite">[1]: UNION!! is broken. Can't figure out how the part events work.</p>
+    <p>
+        THE IDOLM@STER/THE iDOLM@STER, Million Live!, and the Theater Days logo are registered trademarks of Bandai
+        Namco Entertainment Inc.<br>
+        Usage of the logo is meant for creative purposes only for this website and is not meant to infringe any
+        copyright.
+    </p>
+</body>
+
+</html>
